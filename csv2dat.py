@@ -52,5 +52,12 @@ def csv2dat(csv_path, dat_path):
 if __name__ == '__main__':
 	import sys
 	
+	def usage():
+		print('usage csv2dat.py: [csv-files] [dat-file]')
+	
+	if(sys.argv[1] == '--help' or sys.argv[1] == '-h'):
+		usage()
+		sys.exit()
+	
 	csv2dat(sys.argv[1:-1], sys.argv[-1])
 
